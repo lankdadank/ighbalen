@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- php -S localhost:8080 -t . -->
+<head>
+    <script src="js/include.js"></script>
+    <script src="js/require.js"></script>
+    <script src="js/add_elements.js"></script>
+    <div include-html="components/header.html"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous" defer></script>
+</head>
+
+
+<body class="d-flex flex-column min-vh-100">
+
+    <ul class="nav nav-tabs d-flex justify-content-center" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="rmed-tarifit-tab" data-bs-toggle="tab" data-bs-target="#rmed" type="button" role="tab" aria-controls="rmed" aria-selected="true">Idlisen n rmed Tarifit</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="idlisen-s-tarifit-tab" data-bs-toggle="tab" data-bs-target="#s-tarifit" type="button" role="tab" aria-controls="s-tarifit" aria-selected="false">Idlisen s Tarifit</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="idlisen-n-amezruy-tab" data-bs-toggle="tab" data-bs-target="#amezruy" type="button" role="tab" aria-controls="amezruy" aria-selected="false">Idlisen n umezruy</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="idlisen-studies-tab" data-bs-toggle="tab" data-bs-target="#studies" type="button" role="tab" aria-controls="studies" aria-selected="false">Idlisen n studies</button>
+        </li>
+    </ul>
+
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="rmed" role="tabpanel" aria-labelledby="rmed-tarifit-tab">
+            
+            <div style="margin: 50px;" class="text-center">
+                <div class="containter">
+                    <div class="row d-flex justify-content-center" id="rmed_tarifit">
+                        <!-- <div class="card bg-light" style="width: 18rem; height: 15rem; display: inline-block;">
+                            <div class="card-body card-body d-flex flex-column h-100">
+                                <h5 class="card-title">An introduction to Tarifiyt Berber</h5>
+                                <p class="card-text">This book provides a grammatical sketch, glossed texts and a glossary of Tarifiyt Berber,...</p>
+                                <a href="https://drive.google.com/file/d/17uPKJWN2P4UiXLMlKhWMygOrcLUXMt-1/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-primary mt-auto">Download</a>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="tab-pane fade" id="s-tarifit" role="tabpanel" aria-labelledby="idlisen-s-tarifit-tab">
+
+            <div style="margin: 50px;" class="text-center">
+                <div class="containter">
+                    <div class="row d-flex justify-content-center" id="idlisen_tarifit">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="tab-pane fade" id="amezruy" role="tabpanel" aria-labelledby="idlisen-n-amezruy-tab">
+
+            <div style="margin: 50px;" class="text-center">
+                <div class="containter">
+                    <div class="row d-flex justify-content-center" id="idlisen_amezruy">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="tab-pane fade" id="studies" role="tabpanel" aria-labelledby="studies-tab">
+
+            <div style="margin: 50px;" class="text-center">
+                <div class="containter">
+                    <div class="row d-flex justify-content-center" id="idlisen_studies">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>  
+
+    <div include-html="components/footer.html" class="mt-auto"></div>
+</body>
+
+<script defer> 
+    add_elements("rmed_tarifit", "js/resources.json");
+    add_elements("idlisen_tarifit", "js/resources.json");
+    add_elements("idlisen_amezruy", "js/resources.json");
+    add_elements("idlisen_studies", "js/resources.json");
+    includeHTML();
+</script>
+
+
+</html>
+
+
+

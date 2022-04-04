@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- php -S localhost:8080 -t . -->
+
+<head>
+    <script src="js/include.js"></script>
+    <div include-html="components/header.html"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous" defer></script>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <header> 
+        <div class="text-center">
+            <img src="images/banner.png" class="img-fluid" alt="Responsive image">
+        </div>
+    </header>
+
+
+    <form class="container-sm py-5 mb-5">
+        <div class="container py-4 mb-4">
+          <h5 class="text-center">
+                Feel free to contact me for adding resources to this page or correct errors or any other kind of buissines you may have with me.
+          </h5>
+        </div>
+        <div class="row">
+          <div class="col mb-3">
+            <label for="formGroupExampleInput" class="form-label">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="formGroupExampleInput"
+              placeholder="Name"
+            />
+          </div>
+          <div class="col mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Last name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="formGroupExampleInput2"
+              placeholder="Last name"
+            />
+          </div>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">E-mail address</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="example@outlook.com">
+          </div>
+        
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Message</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+    
+        <div class="mb-3 text-center" style="margin-top: 10px;">
+          <button class="btn btn-dark px-5">Send</button>
+        </div>
+      </form>
+
+    <div include-html="components/footer.html" class="mt-auto"></div>
+</body>
+
+<script defer>
+    includeHTML();
+</script>
+
+</html>
